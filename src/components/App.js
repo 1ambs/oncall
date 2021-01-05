@@ -25,6 +25,8 @@ firebase.initializeApp(firebaseConfig);
 
 function App() {
 
+    let newUser = false;
+
     const [userId, setUserId] = useState(false);
     const [userDisplayName, setUserDisplayName] = useState(false);
 
@@ -68,9 +70,12 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p>
-          What information is available on login?
+          What information is available on login? - {newUser}
         </p>
-        <NewUser/>
+
+        { newUser ? <NewUser/> : (<button onClick={()=>{newUser=true}}>
+          Create new user
+        </button>)}
         <button onClick={login}>
           Login
         </button>
