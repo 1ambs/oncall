@@ -1,5 +1,6 @@
 import '../styles/App.css';
 import React, {useEffect, useReducer, useState} from 'react';
+import NewUser from '../components/Newuser'
 
 // Firebase App (the core Firebase SDK) is always required and
 // must be listed before other Firebase SDKs
@@ -63,34 +64,13 @@ function App() {
 
   }
 
-  const newUser = () => {
-    firebase.auth().createUserWithEmailAndPassword('davidmarubbi@gmail.com','letmein')
-        .then((user) => {
-          console.log('User Signed in');
-          console.log(user.user.email)
-          setUserId(user.user.email)
-        })
-        .catch((error) => {
-          var errorCode = error.code;
-          var errorMessage = error.message;
-          // ..
-          console.log(errorCode);
-          console.log(errorMessage);
-        });
-  }
-
   return (
     <div className="App">
       <header className="App-header">
         <p>
           What information is available on login?
         </p>
-        <form >
-
-        </form>
-        <button onClick={newUser}>
-          Create New User
-        </button>
+        <NewUser/>
         <button onClick={login}>
           Login
         </button>
