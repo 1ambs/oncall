@@ -5,7 +5,7 @@ import '../styles/Posts.css';
 const Posts = (props) => {
     return (
         <div className="posts_container">
-            <div className="page_header_container">
+            <div className="pageheader_container">
             <PageHeader
                 className="site-page-header"
                 // onBack={() => null}
@@ -16,8 +16,9 @@ const Posts = (props) => {
                 <div className="article_container">
                     <Card
                     title="Inner Card title"
-
-                    />
+                    >
+                      Card Text
+                    </Card>
                 </div>
             </div>
         </div>
