@@ -15,7 +15,7 @@ const Posts = (props) => {
             <div className="articles_container">
                 <div className="article_container">
                     <Card
-                    title="Inner Card title"
+                    title="Inner Card title by Dave"
 
                     />
                 </div>
